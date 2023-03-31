@@ -1,0 +1,17 @@
+apply plugin: "groovy"
+
+group 'org.springframework'
+version '5.0.21.BUILD-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile("junit:junit:4.12") {
+        exclude group: "org.hamcrest", module: "hamcrest-core"
+    }
+    compile(project(":spring-beans"))
+    compile(project(":spring-core"))
+}
+
